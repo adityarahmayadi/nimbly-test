@@ -121,15 +121,14 @@ const issues = [
 
 function getFilteredList() {
   // Write your code here
-
-  return issues;
+  return issues.filter((issue) => !issue.completedAt);
 }
 
 function getSortedList() {
   const filteredList = getFilteredList();
   // Write your code here
-
-  return filteredList;
+  const data = filteredList.sort((a, b) => b.dueAt - a.dueAt)
+  return data;
 }
 
 function printList() {

@@ -172,10 +172,16 @@ textarea:disabled {
   width: 40px;
   height: 40px;
   /* Write code below */
+  animation: spin 1.2s linear infinite;
 }
 
 @keyframes spin {
-
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .frame {
@@ -184,11 +190,14 @@ textarea:disabled {
   background-color: white;
   border: 5px solid black;
   /* Write code below */
+  display: flex;
+  justify-content: center;
 }
 
 .photo {
   width: 400px;
   /* Write code below */
+  object-fit: contain;
 }
 
 .magazine {
@@ -202,6 +211,7 @@ textarea:disabled {
   text-align: justify;
   float: left;
   /* Write code below */
+  box-sizing: border-box;
 }
 
 .magazine-right {
@@ -211,4 +221,5 @@ textarea:disabled {
   text-align: justify;
   float: right;
   /* Write code below */
+  box-sizing: border-box;
 }
